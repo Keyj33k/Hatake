@@ -33,7 +33,11 @@ def hatake(argv):
          sys.exit(1)
 
    tstart = datetime.now()
-   print(f"\033[0;37m[\033[0;31m+\033[0;37m] Starting at {datetime.now()}\n" + f"\033[0;33m=" * 45)
+
+   print(
+      f"\033[0;37m[\033[0;31m+\033[0;37m] Starting at {datetime.now()}\n" +
+      f"\033[0;33m=" * 45
+   )
 
    try:
       response = requests.get(
@@ -47,19 +51,38 @@ def hatake(argv):
 
       for lst_items, frmt in lst:
          if lst_items == "lat":
-            print(f"\033[0;37m", lst_items, " \033[0;33m>> \033[0;37m", frmt)
+            print(
+               f"\033[0;37m", lst_items,
+               " \033[0;33m>> \033[0;37m",
+               frmt
+            )
          elif lst_items == "lon":
-            print(f"\033[0;37m", lst_items, " \033[0;33m>> \033[0;37m", frmt)
+            print(
+               f"\033[0;37m",
+               lst_items,
+               " \033[0;33m>> \033[0;37m",
+               frmt
+            )
          else:
-            print(f"\033[0;37m", lst_items, " \033[0;31m>> \033[0;37m", frmt)
-
-   except Exception as error:
-      print(f"\033[0;37m[\033[0;33m-\033[0;37m] An error was defined!\n{error}")
+            print(
+               f"\033[0;37m",
+               lst_items,
+               " \033[0;31m>> \033[0;37m",
+               frmt
+            )
+   except KeyboardInterrupt:
+      print(f"\n\033[0;37m[\033[0;31m+\033[0;37m] Ctrl+C pressed. EXITING.")
    except requests.RequestException as reqexc:
       print(f"\033[0;37m[\033[0;33m-\033[0;37m] An error was defined!\n{reqexc}")
+   except Exception as error:
+      print(f"\033[0;37m[\033[0;33m-\033[0;37m] An error was defined!\n{error}")
 
    tend = datetime.now()
-   print(f"\033[0;33m=\033[0;37m" * 45, f"\n\033[0;37m[\033[0;31m+\033[0;37m] Hatake done in {tend - tstart}")
+
+   print(
+      f"\033[0;33m=\033[0;37m" * 45,
+      f"\n\033[0;37m[\033[0;31m+\033[0;37m] Hatake done in {tend - tstart}"
+   )
 
 
 if __name__ == "__main__":
