@@ -17,7 +17,7 @@ pip3 install -r requirements.txt
 ```
 Run the script:
 ```
-python3 hatake.py
+python3 hatake.py -h
 ```
 ---
 ![pypy](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/pypy.jpeg)
