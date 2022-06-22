@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys, getopt
+
 try:
    import requests
 except ImportError:
@@ -53,6 +54,7 @@ def api_request(ipver4):
          print(
             f"\033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 hatake\033[0;31m.\033[0;37mpy \033[0;31m-\033[0;37mh"
          )
+         
          sys.exit(1)
 
       response = requests.get(
@@ -116,9 +118,11 @@ def hatake(argv):
          sys.exit(0)
       elif opt in ("-a", "--addr"):
          ipver4 = arg
+         
          if len(ipver4) == 0:
             print(f"\033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 hatake\033[0;31m.\033[0;37mpy \033[0;31m-\033[0;37mh")
             sys.exit(1)
+            
          api_request(ipver4)
       elif opt in ("-p", "--pipa"):
          public_ipv4_request()
