@@ -22,3 +22,8 @@ python3 hatake.py
 ---
 ![pypy](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/pypy.jpeg)
 ---
+---
+  
+- Tested on 5.17.0-kali3-amd64, 5.15.0-39-generic-Ubuntu
+  
+---
