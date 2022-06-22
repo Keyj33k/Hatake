@@ -106,7 +106,6 @@ def api_request(ipver4):
 
 def hatake(argv):
    try:
-      # opts, args = getopt.getopt(argv, "ha:p", ["ipa=", "pipa="])
       opts, args = getopt.getopt(argv, "ha:ph", ["addr=", "pipa", "help"])
    except getopt.GetoptError:
       print(f"\033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 hatake\033[0;31m.\033[0;37mpy \033[0;31m-\033[0;37mh")
