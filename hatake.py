@@ -19,7 +19,7 @@ def hatake(argv):
    try:
       opts, args = getopt.getopt(argv, "ha:", ["ipa="])
    except getopt.GetoptError:
-      print("python3 hatake.py -a <IPV4>")
+      print("Usage: python3 hatake.py -a <IPV4>")
       sys.exit(1)
 
    for opt, arg in opts:
@@ -29,7 +29,7 @@ def hatake(argv):
       elif opt in ("-a", "--ipa"):
          ipver4 = arg
       else:
-         print("python3 hatake.py -a <IPV4>")
+         print("Usage: python3 hatake.py -a <IPV4>")
          sys.exit(1)
 
    tstart = datetime.now()
