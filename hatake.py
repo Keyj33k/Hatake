@@ -12,14 +12,13 @@ Usage:
    \033[0;33m>>\033[0;37m python3 hatake.py | Get information about your public IPv4 address
    """)
 
-
 def hatake(argv):
    ipver4 = ""
 
    try:
       opts, args = getopt.getopt(argv, "ha:", ["ipa="])
    except getopt.GetoptError:
-      print("Usage: python3 hatake.py -a <IPV4>")
+      print("\033[0;37m[\033[0;31m+\033[0;37m] Usage: python3 hatake.py -a <IPV4>")
       sys.exit(1)
 
    for opt, arg in opts:
@@ -29,8 +28,9 @@ def hatake(argv):
       elif opt in ("-a", "--ipa"):
          ipver4 = arg
       else:
-         print("Usage: python3 hatake.py -a <IPV4>")
-         sys.exit(1)
+         raise getopt.GetoptError(
+            "\033[0;37m[\033[0;31m+\033[0;37m] Usage: python3 hatake.py -a <IPV4>"
+         )
 
    tstart = datetime.now()
 
@@ -40,6 +40,10 @@ def hatake(argv):
    )
 
    try:
+      if ipver4 == "":
+         print("\033[0;37m[\033[0;31m+\033[0;37m] Usage: python3 hatake.py -a <IPV4>")
+         sys.exit(1)
+
       response = requests.get(
          f"""http://ip-api.com/json/{ipver4}?fields=status,message,continent,
            continentCode,country,countryCode,region,regionName,city,district,
@@ -72,10 +76,13 @@ def hatake(argv):
             )
    except KeyboardInterrupt:
       print(f"\n\033[0;37m[\033[0;31m+\033[0;37m] Ctrl+C pressed. EXITING.")
+      sys.exit(1)
    except requests.RequestException as reqexc:
       print(f"\033[0;37m[\033[0;33m-\033[0;37m] An error was defined!\n{reqexc}")
+      sys.exit(1)
    except Exception as error:
       print(f"\033[0;37m[\033[0;33m-\033[0;37m] An error was defined!\n{error}")
+      sys.exit(1)
 
    tend = datetime.now()
 
