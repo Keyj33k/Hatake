@@ -3,6 +3,15 @@
 import sys, getopt
 import requests
 
+# # # # # # # # # # # # # # # # # # # # # #
+#                                         #
+#   Author  :   Keyjeek                   #
+#   Contact :   nomotikag33n@gmail.com    #
+#   Github  :   @Keyj33k                  #
+#   Version :   1.0.0                     #
+#                                         #
+# # # # # # # # # # # # # # # # # # # # # #
+
 def help_func():
    print(f"""\033[0;31m<\033[0;37mHATAKE\033[0;31m> \033[0;37mVer.:1.0.0
 =========================
