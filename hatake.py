@@ -49,7 +49,7 @@ def hatake(argv):
    )
 
    try:
-      if ipver4 == "":
+      if len(ipver4) == 0:
          print("\033[0;37m[\033[0;31m+\033[0;37m] Usage: python3 hatake.py -a <IPV4>")
          sys.exit(1)
 
