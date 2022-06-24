@@ -1,4 +1,4 @@
-# Hatake | Written In <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python Badge"/></a>
+# Hatake:snake:
 
 USAGE of HATAKE:
 -------------------------------------------------------------------
@@ -7,15 +7,13 @@ Cloning the repo:
 ```
 git clone https://github.com/Keyj33k/Hatake.git
 ```
-After cloning:
-```
-cd Hatake
-```
-Install python requirements:
+- 1 Now you need to navigate to the Hatake directory.
+- 2 There is a file called requirements.txt.
+- 3 Install the requirements using this command:
 ```
 pip3 install -r requirements.txt
 ```
-Run the script:
+- 4 Now you can run Hatake:
 ```
 python3 hatake.py -h
 ```
