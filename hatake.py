@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
 import sys, getopt
+from termcolor import colored
+from datetime import datetime
+import pyfiglet
 
 try:
    import requests
@@ -133,10 +136,6 @@ def hatake(argv):
 
 
 if __name__ == "__main__":
-   from termcolor import colored
-   from datetime import datetime
-   import pyfiglet
-
    print(
       colored(
          pyfiglet.figlet_format(
