@@ -54,10 +54,7 @@ def api_request(ipver4):
 
    try:
       if len(ipver4) == 0:
-         print(
-            f"\033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 hatake\033[0;31m.\033[0;37mpy \033[0;31m-\033[0;37mh"
-         )
-         
+         print(f"\033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 hatake\033[0;31m.\033[0;37mpy \033[0;31m-\033[0;37mh")
          sys.exit(1)
 
       response = requests.get(
@@ -130,9 +127,7 @@ def hatake(argv):
          public_ipv4_request()
          sys.exit(0)
       else:
-         raise getopt.GetoptError(
-            f"\033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 hatake\033[0;31m.\033[0;37mpy \033[0;31m-\033[0;37mh"
-         )
+         raise getopt.GetoptError(f"\033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 hatake\033[0;31m.\033[0;37mpy \033[0;31m-\033[0;37mh")
 
 
 if __name__ == "__main__":
