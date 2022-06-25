@@ -1,4 +1,4 @@
-# Hatake:snake:
+# Hatake:snake: | Written In <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python Badge"/></a>
 
 USAGE of HATAKE:
 -------------------------------------------------------------------
