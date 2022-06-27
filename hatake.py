@@ -20,6 +20,7 @@ except ImportError:
 #                                         #
 # # # # # # # # # # # # # # # # # # # # # #
 
+
 def help_func():
     print(f"""\033[0;31m<\033[0;37mHATAKE\033[0;31m> | \033[0;37mPython\033[0;31m-\033[0;37m3\033[0;31m.\033[0;37m10\033[0;31m.\033[0;37m4 \033[0;31m| \033[0;37mVer\033[0;31m.:\033[0;37m1\033[0;31m.\033[0;37m0\033[0;31m.\033[0;37m0
 \033[0;33m==================================================\033[0;37m
@@ -47,6 +48,7 @@ def public_ipv4_request():
             f" \033[0;37m[\033[0;31m+\033[0;37m] Your Public ",
             f"IPv4\033[0;31m:\033[0;37m\t{requests.get('https://api.ipify.org').text}"
         )
+        
     except requests.RequestException as reqexc:
         print(reqexc)
 
@@ -95,6 +97,7 @@ def api_request(ipver4):
                     f" \033[0;33m>> \033[0;37m",
                     frmt
                 )
+                
             elif lst_items == "lon":
                 print(
                     f"\t\033[0;37m[\033[0;32m+\033[0;37m]\033[0;37m",
@@ -103,6 +106,7 @@ def api_request(ipver4):
                     f" \033[0;33m>> \033[0;37m",
                     frmt
                 )
+                
             else:
                 print(
                     f"\t\033[0;37m[\033[0;32m+\033[0;37m]\033[0;37m",
@@ -111,12 +115,15 @@ def api_request(ipver4):
                     f" \033[0;31m>> \033[0;37m",
                     frmt
                 )
+                
     except KeyboardInterrupt:
         print(f"\n\033[0;37m[\033[0;33m-\033[0;37m] Ctrl+C pressed. EXITING.")
         sys.exit(1)
+        
     except requests.RequestException as reqexc:
         print(f"\033[0;37m[\033[0;33m-\033[0;37m] An error was defined!\n{reqexc}")
         sys.exit(1)
+        
     except Exception as error:
         print(f"\033[0;37m[\033[0;33m-\033[0;37m] An error was defined!\n{error}")
         sys.exit(1)
@@ -132,6 +139,7 @@ def api_request(ipver4):
 def hatake(argv):
     try:
         opts, args = getopt.getopt(argv, "ha:ph", ["addr=", "pipa", "help"])
+        
     except getopt.GetoptError:
         print(
             f" \033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 ",
@@ -143,6 +151,7 @@ def hatake(argv):
         if opt == '-h' or opt == '--help':
             help_func()
             sys.exit(0)
+            
         elif opt in ("-a", "--addr"):
             ipver4 = arg
 
@@ -157,6 +166,7 @@ def hatake(argv):
         elif opt in ("-p", "--pipa"):
             public_ipv4_request()
             sys.exit(0)
+            
         else:
             raise getopt.GetoptError(
                 f" \033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 ",
