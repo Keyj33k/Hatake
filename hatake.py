@@ -56,7 +56,7 @@ def public_ipv4_request():
 
     print(
         " " + f"\033[0;33m=\033[0;37m" * 50,
-        f"\n \033[0;37m[\033[0;31m+\033[0;37m] Hatake done in {tend - tstart}"
+        f"\n \033[0;37m[\033[0;31m*\033[0;37m] Hatake done in {tend - tstart}"
     )
 
 
@@ -132,7 +132,7 @@ def api_request(ipver4):
 
     print(
         f"\033[0;33m=\033[0;37m" * 50,
-        f"\n \033[0;37m[\033[0;31m+\033[0;37m] Hatake done in {tend - tstart}"
+        f"\n \033[0;37m[\033[0;31m*\033[0;37m] Hatake done in {tend - tstart}"
     )
 
 
