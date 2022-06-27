@@ -70,7 +70,7 @@ def api_request(ipver4):
     try:
         if len(ipver4) == 0:
             print(
-                f"\033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 ",
+                f" \033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 ",
                 f"hatake\033[0;31m.\033[0;37mpy \033[0;31m-\033[0;37mh"
             )
             sys.exit(1)
@@ -148,7 +148,7 @@ def hatake(argv):
 
             if len(ipver4) == 0:
                 print(
-                    f"\033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m",
+                    f" \033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m",
                     " python3 hatake\033[0;31m.\033[0;37mpy \033[0;31m-\033[0;37mh"
                 )
                 sys.exit(1)
@@ -159,7 +159,7 @@ def hatake(argv):
             sys.exit(0)
         else:
             raise getopt.GetoptError(
-                f"\033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 ",
+                f" \033[0;37m[\033[0;31m*\033[0;37m] Usage\033[0;31m:\033[0;37m python3 ",
                 "hatake\033[0;31m.\033[0;37mpy \033[0;31m-\033[0;37mh")
 
 
