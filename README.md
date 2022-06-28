@@ -7,13 +7,13 @@ Cloning the repo:
 ```
 git clone https://github.com/Keyj33k/Hatake.git
 ```
-- 1. Now you need to navigate to the Hatake directory.
-- 2. There is a file called requirements.txt.
-- 3. Install the requirements using this command:
+- 1 . Now you need to navigate to the Hatake directory.
+- 2 . There is a file called requirements.txt.
+- 3 . Install the requirements using this command:
 ```
 pip3 install -r requirements.txt
 ```
-- 4. Now you can run Hatake:
+- 4 . Now you can run Hatake:
 ```
 python3 hatake.py -h
 ```
