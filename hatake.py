@@ -9,7 +9,7 @@ try:
     import requests
     
 except ImportError:
-    raise RuntimeError("Failed to import required modules. EXIT.")
+    raise RuntimeError("Important modules are missing!\nTry 'pip install -r requirements.txt'")
 
 
 # # # # # # # # # # # # # # # # # # # # # #
